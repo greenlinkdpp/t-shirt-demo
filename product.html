@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Digital Product Passport</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f8;
+    color:#222;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+
+.header{
+    background:#1f4ed8;
+    color:white;
+    padding:28px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.header-left h1{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.header-left p{
+    font-size:14px;
+    opacity:0.9;
+}
+
+.qr-box{
+    background:white;
+    padding:10px;
+    border-radius:10px;
+}
+
+.qr-box img{
+    width:110px;
+    height:110px;
+}
+
+.status{
+    padding:18px 28px;
+    background:#eef7ee;
+    color:#2e7d32;
+    font-size:14px;
+    border-bottom:1px solid #e6e6e6;
+}
+
+.section{
+    padding:30px;
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:20px;
+    font-size:22px;
+    color:#1f4ed8;
+}
+
+.product-area{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+.product-image{
+    flex:1;
+    min-width:240px;
+}
+
+.product-image img{
+    width:100%;
+    border-radius:12px;
+    border:1px solid #eee;
+}
+
+.product-info{
+    flex:1;
+    min-width:260px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:14px;
+}
+
+.info-card{
+    background:#f8fafc;
+    padding:14px;
+    border-radius:10px;
+}
+
+.info-label{
+    font-size:12px;
+    color:#666;
+    margin-bottom:6px;
+}
+
+.info-value{
+    font-size:15px;
+    font-weight:bold;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table th,
+table td{
+    border:1px solid #e6e6e6;
+    padding:12px;
+    text-align:left;
+    font-size:14px;
+}
+
+table th{
+    background:#f8fafc;
+}
+
+.sustain-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:16px;
+    margin-top:18px;
+}
+
+.s-card{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:10px;
+}
+
+.s-card .title{
+    font-size:13px;
+    color:#666;
+    margin-bottom:8px;
+}
+
+.s-card .value{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.footer{
+    padding:24px 30px;
+    border-top:1px solid #eee;
+    font-size:13px;
+    color:#777;
+    background:#fafafa;
+}
+
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        gap:20px;
+        align-items:flex-start;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .sustain-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+
+        <div class="header-left">
+            <h1>Digital Product Passport</h1>
+            <p>EU Ecodesign Product Data Overview</p>
+        </div>
+
+        <!-- QR -->
+        <div class="qr-box">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://greenlinkdpp.github.io/product.html">
+        </div>
+
+    </div>
+
+    <!-- Status -->
+    <div class="status">
+        ✔ Verified Product Data &nbsp;&nbsp;
+        ✔ Structured DPP Format &nbsp;&nbsp;
+        ✔ QR Accessible
+    </div>
+
+    <!-- Product -->
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-box"></i>
+            Product Information
+        </div>
+
+        <div class="product-area">
+
+            <!-- Product Image -->
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800" alt="Product">
+            </div>
+
+            <!-- Product Info -->
+            <div class="product-info">
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <div class="info-label">Product Name</div>
+                        <div class="info-value">Cotton T-Shirt</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">SKU</div>
+                        <div class="info-value">TS-001</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">Brand</div>
+                        <div class="info-value">GreenLink Apparel</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">Manufacturer</div>
+                        <div class="info-value">ABC Textile Co., Ltd.</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">Country of Origin</div>
+                        <div class="info-value">China</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-label">DPP ID</div>
+                        <div class="info-value">DPP-TS-2026-001</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Materials -->
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-layer-group"></i>
+            Material Composition
+        </div>
+
+        <table>
+
+            <tr>
+                <th>Material</th>
+                <th>Type</th>
+                <th>Percentage</th>
+                <th>Origin</th>
+            </tr>
+
+            <tr>
+                <td>Cotton</td>
+                <td>Raw Material</td>
+                <td>95%</td>
+                <td>CN</td>
+            </tr>
+
+            <tr>
+                <td>Polyester</td>
+                <td>Recycled</td>
+                <td>5%</td>
+                <td>CN</td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- Sustainability -->
+    <div class="section">
+
+        <div class="section-title">
+            <i class="fa-solid fa-leaf"></i>
+            Sustainability Information
+        </div>
+
+        <div class="sustain-grid">
+
+            <div class="s-card">
+                <div class="title">Recycled Content</div>
+                <div class="value">10%</div>
+            </div>
+
+            <div class="s-card">
+                <div class="title">Carbon Footprint</div>
+                <div class="value">5.2 kg CO₂e</div>
+            </div>
+
+            <div class="s-card">
+                <div class="title">Hazardous Substance</div>
+                <div class="value">No</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+        Data Source: ERP / Supplier / Manual Entry<br>
+        Last Updated: 2026-05-11
+
+    </div>
+
+</div>
+
+</body>
+</html>
